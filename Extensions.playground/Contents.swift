@@ -9,7 +9,6 @@ extension Velocity {
     var kph: Velocity { return self * 1.60934 }
     var mph: Velocity { return self }
 }
-
 protocol VehicleType {
     var topSpeed: Velocity { get }
     var numberOfDoors: Int { get }
@@ -80,3 +79,12 @@ c.emptyGas(0.3)
 c.gasLevel
 c.fillGas()
 c.gasLevel
+
+
+////////////// typealias for Int
+typealias Multiply = Int
+extension Multiply {
+    var timesFive : Multiply { return self * 5 }
+}
+5.timesFive
+3.timesFive
