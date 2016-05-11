@@ -15,3 +15,17 @@ protocol VehicleType {
     var numberOfDoors: Int { get }
     var hasFlatbed: Bool { get }
 }
+
+struct Car {
+    let make: String
+    let model: String
+    let year: Int
+    let colour: String
+    let nickname: String
+    var gasLevel: Double {
+        willSet {
+            precondition(newValue <= 1.0 && newValue >= 0.0,
+                         "New value must be in between 0 and 1.")
+        }
+    }
+}
