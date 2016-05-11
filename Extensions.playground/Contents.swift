@@ -46,3 +46,5 @@ extension Car {
                   gasLevel: 1.0 )
         }
 }
+
+var c = Car(carMake: "Ford", carModel: "Fusion", carYear: 2013)
