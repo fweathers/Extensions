@@ -29,3 +29,10 @@ struct Car {
         }
     }
 }
+
+extension Car: VehicleType {
+    var topSpeed: Velocity { return 180 }
+    var numberOfDoors: Int { return 4 }
+    var hasFlatbed: Bool { return false }
+    
+}
