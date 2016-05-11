@@ -44,7 +44,7 @@ extension Car {
                   colour: "Black",
                   nickname: "N/A",
                   gasLevel: 1.0 )
-        }
+    }
 }
 
 var c = Car(carMake: "Ford", carModel: "Fusion", carYear: 2013)
@@ -66,5 +66,18 @@ extension Car {
         } else {
             return .Sedan
         }
+    }
+}
+
+c.kind.description
+
+extension Car {
+    mutating func emptyGas(amount: Double) {
+    precondition(amount <= 1 && amount > 0,
+    "Amount to remove must be between 0 and 1.")
+    gasLevel -= amount
+    }
+    mutating func fillGas() {
+        gasLevel = 1.0
     }
 }
