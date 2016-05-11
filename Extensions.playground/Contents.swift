@@ -10,3 +10,8 @@ extension Velocity {
     var mph: Velocity { return self }
 }
 
+protocol VehicleType {
+    var topSpeed: Velocity { get }
+    var numberOfDoors: Int { get }
+    var hasFlatbed: Bool { get }
+}
